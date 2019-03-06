@@ -52,9 +52,9 @@ def play(songs)
   binding.pry
 
   case song
-    when tracklist.include?(song.to_i)
+    when tracklist.include?(song.to_i) == true
       puts "Playing #{songs[song]}"
-    when songs.include?(song)
+    when songs.include?(song) == true      
       puts "Playing #{song}"
     else
       puts "Invalid input, please try again"
