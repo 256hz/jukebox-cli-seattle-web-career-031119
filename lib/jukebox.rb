@@ -10,37 +10,37 @@ songs = [
   "Amos Lee - Keep It Loose, Keep It Tight"
 ]
 
-def get_input
+def get_input(songs)
   puts "Please enter a command:"
   command = gets.chomp
   case command
     when "help"
       help
     when "list"
-      list
+      list(songs)
     when "play"
-      play
+      play*(songs)
     when "exit"
       exit_jukebox
     else
       puts "I don't recognize that command."
-      get_input
+      get_input(songs)
   end
 end
 
 def help
   puts "I accept the following commands:\n- help : displays this help message\n- list : displays a list of songs you can play\n- play : lets you choose a song to play\n- exit : exits this program"
-  get_input
+  get_input(songs)
 end
 
-def list
+def list(songs)
   songs.each.with_index(1) do |song|
     puts "#{index}. #{song}"
   end
   get_input
 end
 
-def play
+def play(songs)
   puts "Please enter a song name or number:"
   song = gets.chomp
   tracklist = []
@@ -65,7 +65,7 @@ end
 
 def run(songs)
   help
-  get_input
+  get_input(songs)
 end
 
   
