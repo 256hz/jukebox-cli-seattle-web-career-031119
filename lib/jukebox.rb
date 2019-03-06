@@ -13,6 +13,19 @@ songs = [
 def get_input
   puts "Please enter a command:"
   command = gets.chomp!
+  case command
+    when "help"
+      help
+    when "list"
+      list
+    when "play"
+      play
+    when exit
+      quit
+    else
+      puts "I don't recognize that command."
+      get_input
+  end
 end
 
 def help
