@@ -44,8 +44,8 @@ def play(songs)
   puts "Please enter a song name or number:"
   song = gets.chomp
   tracklist = []
-  songs.each do |no|
-    tracklist << no + 1
+  songs.each.with_index do |track, index|
+    tracklist << index + 1
   end
   case song
     when tracklist.include?(song)
