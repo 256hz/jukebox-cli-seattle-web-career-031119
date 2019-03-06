@@ -12,7 +12,7 @@ songs = [
 
 def get_input
   puts "Please enter a command:"
-  command = gets.chomp!.downcase!
+  command = gets.chomp
   case command
     when "help"
       help
