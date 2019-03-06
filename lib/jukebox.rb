@@ -68,4 +68,8 @@ def exit_jukebox
 end
 
 def run
+  help
+  get_input
+end
+
   
