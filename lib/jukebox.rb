@@ -15,7 +15,7 @@ def get_input(songs)
   command = gets.chomp
   case command
     when "help"
-      help
+      help(songs)
     when "list"
       list(songs)
     when "play"
@@ -28,7 +28,7 @@ def get_input(songs)
   end
 end
 
-def help
+def help(songs)
   puts "I accept the following commands:\n- help : displays this help message\n- list : displays a list of songs you can play\n- play : lets you choose a song to play\n- exit : exits this program"
   get_input(songs)
 end
@@ -37,7 +37,7 @@ def list(songs)
   songs.each.with_index(1) do |song|
     puts "#{index}. #{song}"
   end
-  get_input
+  get_input(songs)
 end
 
 def play(songs)
@@ -54,7 +54,7 @@ def play(songs)
       puts "Playing #{song}"
     else
       puts "Invalid input, please try again"
-      play
+      play(songs)
   end
 end
 
