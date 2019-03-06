@@ -19,7 +19,7 @@ def get_input(songs)
     when "list"
       list(songs)
     when "play"
-      play*(songs)
+      play(songs)
     when "exit"
       exit_jukebox
     else
