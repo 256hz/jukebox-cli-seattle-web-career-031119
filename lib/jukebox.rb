@@ -10,3 +10,5 @@ songs = [
   "Amos Lee - Keep It Loose, Keep It Tight"
 ]
 
+def read
+  puts "Please enter a command:"
