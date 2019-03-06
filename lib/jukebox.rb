@@ -1,3 +1,5 @@
+require 'pry'
+
 songs = [
   "Phoenix - 1901",
   "Tokyo Police Club - Wait Up",
@@ -46,6 +48,7 @@ def play(songs)
   tracklist = []
   songs.each.with_index do |track, index|
     tracklist << index + 1
+  binding.pry
   end
   case song
     when tracklist.include?(song)
