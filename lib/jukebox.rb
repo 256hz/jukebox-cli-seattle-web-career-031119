@@ -48,7 +48,7 @@ def play(songs)
   tracklist = []
   songs.each.with_index do |track, index|
     tracklist << index + 1
-  #binding.pry
+  binding.pry
   end
   case song
     when tracklist.include?(song.to_i)
