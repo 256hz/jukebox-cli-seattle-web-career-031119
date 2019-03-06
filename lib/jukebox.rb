@@ -34,7 +34,7 @@ def help(songs)
 end
 
 def list(songs)
-  songs.each.with_index(1) do |song|
+  songs.each.with_index(1) do |song, index|
     puts "#{index}. #{song}"
   end
   get_input(songs)
