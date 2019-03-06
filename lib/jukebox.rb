@@ -67,7 +67,7 @@ def exit_jukebox
   exit
 end
 
-def run
+def run(songs)
   help
   get_input
 end
