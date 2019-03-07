@@ -13,7 +13,7 @@ songs = [
 ]
 
 def run(songs)
-  help(songs)
+  #help(songs) if first_time = true
   puts "Please enter a command:"
   command = gets.chomp
   case command
