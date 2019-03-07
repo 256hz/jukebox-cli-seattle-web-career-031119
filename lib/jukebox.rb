@@ -12,7 +12,8 @@ songs = [
   "Amos Lee - Keep It Loose, Keep It Tight"
 ]
 
-def get_input(songs)
+def run(songs)
+  help(songs)
   puts "Please enter a command:"
   command = gets.chomp
   case command
@@ -26,20 +27,21 @@ def get_input(songs)
       exit_jukebox
     else
       puts "I don't recognize that command."
-      get_input(songs)
+      run(songs)
   end
 end
 
+
 def help(songs)
   puts "I accept the following commands:\n- help : displays this help message\n- list : displays a list of songs you can play\n- play : lets you choose a song to play\n- exit : exits this program"
-  get_input(songs)
+  run(songs)
 end
 
 def list(songs)
   songs.each.with_index(1) do |song, index|
     puts "#{index}. #{song}"
   end
-  get_input(songs)
+  run(songs)
 end
 
 def play(songs)
@@ -58,17 +60,10 @@ def play(songs)
       puts "Invalid input, please try again"
       play(songs)
   end
-  get_input(songs)
+  run(songs)
 end
 
 def exit_jukebox
   puts "Goodbye."
   exit
 end
-
-def run(songs)
-  help(songs)
-  get_input(songs)
-end
-
-  
