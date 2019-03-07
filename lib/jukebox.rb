@@ -49,8 +49,6 @@ def play(songs)
   songs.each.with_index do |track, index|
     tracklist << index
   end
-  #binding.pry
-
   case
     when tracklist.include?(song.to_i-1) == true
       puts "Playing #{songs[song.to_i-1]}"
@@ -60,6 +58,7 @@ def play(songs)
       puts "Invalid input, please try again"
       play(songs)
   end
+  get_input(songs)
 end
 
 def exit_jukebox
