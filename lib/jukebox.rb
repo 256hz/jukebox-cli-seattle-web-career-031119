@@ -51,9 +51,9 @@ def play(songs)
   end
   binding.pry
 
-  case song
+  case
     when tracklist.include?(song.to_i) == true
-      puts "Playing #{songs[song]}"
+      puts "Playing #{songs[song.to_i]}"
     when songs.include?(song) == true      
       puts "Playing #{song}"
     else
