@@ -1,6 +1,6 @@
 require 'pry'
 
-songs = [
+$songs = [
   "Phoenix - 1901",
   "Tokyo Police Club - Wait Up",
   "Sufjan Stevens - Too Much",
@@ -12,7 +12,7 @@ songs = [
   "Amos Lee - Keep It Loose, Keep It Tight"
 ]
 
-def run(songs)
+def run#(songs)
   #help(songs) if first_time = true
   puts "Please enter a command:"
   command = gets.chomp
@@ -32,19 +32,19 @@ def run(songs)
 end
 
 
-def help(songs)
+def help#(songs)
   puts "I accept the following commands:\n- help : displays this help message\n- list : displays a list of songs you can play\n- play : lets you choose a song to play\n- exit : exits this program"
-  run(songs)
+  run#(songs)
 end
 
-def list(songs)
+def list#(songs)
   songs.each.with_index(1) do |song, index|
     puts "#{index}. #{song}"
   end
-  run(songs)
+  run#(songs)
 end
 
-def play(songs)
+def play#(songs)
   puts "Please enter a song name or number:"
   song = gets.chomp
   tracklist = []
@@ -59,7 +59,7 @@ def play(songs)
     else
       puts "Invalid input, please try again"
   end
-  run(songs)
+  run#(songs)
 end
 
 def exit_jukebox
