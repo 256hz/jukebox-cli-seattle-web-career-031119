@@ -24,11 +24,12 @@ def run(songs)
       list(songs)
     when "play"
       play(songs)
+    when "exit"
+      exit_jukebox
     else
       puts "I don't recognize that command."
     end
   end
-  exit_jukebox
 end
 
 
