@@ -47,7 +47,7 @@ def play(songs)
   song = gets.chomp
   tracklist = []
   songs.each.with_index do |track, index|
-    tracklist << index + 1
+    tracklist << index
   end
   #binding.pry
 
