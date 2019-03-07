@@ -18,16 +18,16 @@ def run#(songs)
   command = gets.chomp
   case command
     when "help"
-      help(songs)
+      help#(songs)
     when "list"
-      list(songs)
+      list#(songs)
     when "play"
-      play(songs)
+      play#(songs)
     when "exit"
       exit_jukebox
     else
       puts "I don't recognize that command."
-      run(songs)
+      run#(songs)
   end
 end
 
